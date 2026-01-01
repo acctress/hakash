@@ -22,5 +22,10 @@ times4 x = x * 4
 
 -- Map a list of numbers starting from one to five using the times4 function.
 listTimes4 = map times4 [1 .. 5]
-
 -- [4,8,12,16,20]
+
+-- A simple implementation of a map function
+multBy4 :: [Int] -> [Int]
+multBy4 [] = []
+multBy4 (x : xs) = times4 x : multBy4 xs
+-- x is the first item, xs is the rest of the items
