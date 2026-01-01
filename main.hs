@@ -1,3 +1,5 @@
+import Data.List
+
 -- A simple function to check if a character is an alphabetical character
 isAlpha :: Char -> Bool
 isAlpha c = c `elem` ['a' .. 'z']
@@ -13,3 +15,12 @@ length' xs = sum [1 | _ <- xs]
 -- Returns a list of tuples which represent triangles
 triangles :: [(Integer, Integer, Integer)]
 triangles = [(a, b, c) | c <- [1 .. 10], b <- [1 .. 10], a <- [1 .. 10]]
+
+-- Create a higher order function which will map each number in a list to itself times four.
+times4 :: Int -> Int
+times4 x = x * 4
+
+-- Map a list of numbers starting from one to five using the times4 function.
+listTimes4 = map times4 [1 .. 5]
+
+-- [4,8,12,16,20]
